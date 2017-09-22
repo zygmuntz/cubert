@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 
-"convert three-dimensional data with labels from CSV to JSON"
+"""
+convert three-dimensional data with labels from CSV to JSON
+the columns in the input file should be [ 'cid', 'x', 'y', 'z' ]
+"""
 
 import sys
 import pandas as pd
@@ -14,7 +17,7 @@ except IndexError:
 	input_file = 'data.csv'
 	
 try:
-	input_file = sys.argv[2]
+	output_file = sys.argv[2]
 except IndexError:
 	output_file = 'data.json'
 	
